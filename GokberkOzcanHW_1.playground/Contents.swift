@@ -1,9 +1,10 @@
 import Foundation
+//Xcode 14.0.1 ile çalışıldı.
 print("---------------Question 1: ---------------")
 func isPalindrome(word: String) {
     
     let reversedString = String(word.reversed())
-    if(word != "" && word == reversedString) {
+    if(word != "" && word.lowercased() == reversedString.lowercased()) {
         print("The \(word) is Palindrome")
     } else {
         print("The \(word) is not a Palindrome")
