@@ -4,13 +4,15 @@ print("---------------Question 1: ---------------")
 func isPalindrome(word: String) {
     
     let reversedString = String(word.reversed())
-    if(word != "" && word.lowercased() == reversedString.lowercased()) {
+    let reversedv2 = reversedString.replacingOccurrences(of: " ", with: "")
+    print(reversedv2)
+    if(word != "" && word.lowercased() == reversedv2.lowercased()) {
         print("The \(word) is Palindrome")
     } else {
         print("The \(word) is not a Palindrome")
     }
 }
-isPalindrome(word: "kek")
+isPalindrome(word: "taco cat taco cat".replacingOccurrences(of: " ", with: ""))
 print("---------------Question 2: ---------------")
 
 func freqOfAnArray<T: Equatable>(arr: [T]) -> Dictionary<T, Int> {
